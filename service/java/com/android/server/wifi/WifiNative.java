@@ -574,7 +574,7 @@ public class WifiNative {
        // if (mSuspendOptEnabled == enabled) return true;
         mSuspendOptEnabled = enabled;
 
-        Log.e("native", "do suspend " + enabled);
+        if (DBG) Log.d("native", "do suspend " + enabled);
         if (enabled) {
             return doBooleanCommand("DRIVER SETSUSPENDMODE 1");
         } else {
